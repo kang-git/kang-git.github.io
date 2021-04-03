@@ -1,0 +1,512 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>在VScode中使用matlab插件 - Jason&#39;s Blog</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="这篇文章应该是我第一次写有点实用性,有带指导作用的文章...">
+  <meta name="author" content="kang">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/Jason/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1445822_s6x2xcokxrl.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: true,
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: '/images/theme/loading.gif'
+      },
+      donate: {
+        enable: true,
+        alipay: '/images/zfb.jpg',
+        wechat: '/images/wc.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '',
+          api: 'https://source.unsplash.com/random/1920x1080'
+        },
+        motto: {
+          default: '',
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'simple'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="lock-screen">
+  <div class="loading"></div>
+  
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+    </div>
+    <div class="center">在VScode中使用matlab插件</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+      <div id="qrcode-navbar"></div>
+    
+  </nav>
+
+  
+
+<nav class="menu">
+  <div class="menu-wrap">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 时间轴</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a>  | © 2019-2021 - <a href="/about/">Uhoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/Jason/images/face8.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">在VScode中使用matlab插件</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>七月 06, 2019</span>
+      
+        <span class="post-info-item">
+          <i class="iconfont iconeye"></i><span id="/Jason/2019/07/06/009matlab-extension/" class="leancloud" data-flag-title="在VScode中使用matlab插件"></span>
+        </span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1768</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        安装完之后D盘的裤腰带又变高了，写机原课设的电算程序用了两天，发现matlab打开的速度实在是太慢了，慢的让人不能忍受，当然和我的坚若磐石硕离不开关系，但是我发现其他同学的相对性能已经很高的游戏本也是快不了多少，，而且界面有点难看，尽管2018a版的UI已经做到很不错了，所以就想着能不能在vscode里面搞事情，一查果真有matlab的插件，那下面就来写一下利用插件在vscode里面使用轻量级的matlab</p>
+<p>但是当我写完这篇博客的时候才发现好像这个流程所作的并不叫轻量，只是创造了一个能利用matlab特长的令人舒适一点的编码环境而已</p>
+<hr>
+<h2 id="基本步骤"><a href="#基本步骤" class="headerlink" title="基本步骤"></a>基本步骤</h2><blockquote>
+<ul>
+<li>安装MATLAB2018a版本（老版本可能会不支持）</li>
+<li>安装VScode最新版（亲测20195月更新后的完全可用）</li>
+<li>在VScode中安装<code>Matlab</code>插件和<code>Code Runner</code>插件</li>
+<li>修改相关插件的设置</li>
+<li>配置设置文件<code>settings.json</code></li>
+<li>运行一个``.m文件`测试功能是否正常</li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="开始了开始了"><a href="#开始了开始了" class="headerlink" title="开始了开始了"></a>开始了开始了</h2><h4 id="1-安装MATLAB2018a"><a href="#1-安装MATLAB2018a" class="headerlink" title="1.安装MATLAB2018a"></a>1.安装MATLAB2018a</h4><ul>
+<li>这个就自行百度，必应，谷歌（什么，你不会，那我也不会啊)</li>
+</ul>
+<h4 id="2-安装VScode最新版"><a href="#2-安装VScode最新版" class="headerlink" title="2.安装VScode最新版"></a>2.安装VScode最新版</h4><ul>
+<li>同上</li>
+</ul>
+<h4 id="3-安装Matlab插件和Code-Runner插件"><a href="#3-安装Matlab插件和Code-Runner插件" class="headerlink" title="3.安装Matlab插件和Code Runner插件"></a>3.安装<code>Matlab</code>插件和<code>Code Runner</code>插件</h4><ul>
+<li><p>使用<code>Ctrl+Shift+X</code>快捷键或者在VScode左边栏里面打开扩展界面，然后在扩展界面搜索  Matlab  和  Code  Runner  两个扩展，然后直接安装，两个扩展得说明介绍界面如下：</p>
+</li>
+<li><p>插件Matlab<br><img   class="lazyload" data-original="/../images/0021.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="Matlab"></p>
+</li>
+<li><p>插件Code Runner<br><img   class="lazyload" data-original="/../images/0020.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="Code Runner"></p>
+</li>
+</ul>
+<h4 id="4-修改相关的插件设置"><a href="#4-修改相关的插件设置" class="headerlink" title="4.修改相关的插件设置"></a>4.修改相关的插件设置</h4><blockquote>
+<p>对Matlab插件相关设置进行更改</p>
+<p>打开设置，然后搜索Matlab，弹出如下界面并修改为下面界面所显示的</p>
+<p><img   class="lazyload" data-original="/../images/0022.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="matlab"></p>
+<ul>
+<li><p>Matlab: Linter Config项中填写Matlab程序文件中<code>mlint.exe</code>的路径</p>
+</li>
+<li><p>Matlab: Linter Encoding项中填写<code>GB2312</code>,因为matlab对中文的编码格式为GB2312</p>
+</li>
+<li><p>勾选<code>Run the linting on save of file</code></p>
+</li>
+<li><p>Matlabpath故名思义就是填写<code>Matlab.exe</code>路径</p>
+</li>
+<li><p>最后一项路径填写同第一项</p>
+</li>
+</ul>
+<p>对Code Runner插件进行设置</p>
+<p>在settings里面搜索<code>code runner</code>，在<code>Excutor Map</code>选项里面点击<code>Edit in settings.json</code></p>
+<p>在<code>settings.json</code>文件中添加下面代码</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"> <span class="hljs-string">&quot;code-runner.executorMap&quot;</span>: &#123;<br>    <span class="hljs-string">&quot;matlab&quot;</span>: <span class="hljs-string">&quot;cd <span class="hljs-variable">$dir</span> &amp;&amp; matlab -nosplash -nodesktop -r <span class="hljs-variable">$fileNameWithoutExt</span>&quot;</span> <br>&#125;,<br></code></pre></td></tr></table></figure>
+
+<h4 id="5-配置设置文件settings-json"><a href="#5-配置设置文件settings-json" class="headerlink" title="5.配置设置文件settings.json"></a>5.配置设置文件<code>settings.json</code></h4><ul>
+<li>将<code>.m</code>扩展名关联至matlab，在<code>settings.json</code>文件中添加以下代码</li>
+</ul>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 1c"><span class="hljs-string">&quot;files.associations&quot;</span>: &#123;<span class="hljs-string">&quot;*.m&quot;</span>: <span class="hljs-string">&quot;matlab&quot;</span>&#125;,<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>设置vscode对<code>.m</code>文件的默认编码格式为<code>gb2312</code>,在<code>settings.json</code>文件中添加以下代码</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css">&quot;<span class="hljs-selector-attr">[matlab]</span>&quot;: &#123;<br>    <span class="hljs-string">&quot;files.encoding&quot;</span>: <span class="hljs-string">&quot;gb2312&quot;</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>配置好的<code>settings.json</code>文件如下</li>
+</ul>
+<p><img   class="lazyload" data-original="/../images/0026.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="settings.json"></p>
+<h4 id="6-测试一个-m文件是否能正常"><a href="#6-测试一个-m文件是否能正常" class="headerlink" title="6.测试一个.m文件是否能正常"></a>6.测试一个<code>.m</code>文件是否能正常</h4><ul>
+<li>找一个机原课设的<code>.m</code>文件来试一下</li>
+<li>用vscode打开一个<code>.m</code>文件</li>
+<li>使用code runner快捷键<code>Ctrl+Alt+N</code>,测试文件运行效果如下图</li>
+</ul>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">Tips:</span> .m 文件一定要单开vscode打开，否则会因为路径问题显示xxxx函数未定义等问题<br></code></pre></td></tr></table></figure>
+
+<p><img   class="lazyload" data-original="/../images/0024.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="总体"><br><img   class="lazyload" data-original="/../images/0025.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="绘图显示效果"></p>
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>kang</li>
+    <li><strong>本文链接：</strong><a href="https://kangiter.gitee.io/Jason/2019/07/06/009matlab-extension/index.html" title="https:&#x2F;&#x2F;kangiter.gitee.io&#x2F;Jason&#x2F;2019&#x2F;07&#x2F;06&#x2F;009matlab-extension&#x2F;index.html">https:&#x2F;&#x2F;kangiter.gitee.io&#x2F;Jason&#x2F;2019&#x2F;07&#x2F;06&#x2F;009matlab-extension&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="/images/zfb.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/Jason/tags/matlab/" rel="tag">matlab</a></li><li class="tag-list-item"><a class="tag-list-link" href="/Jason/tags/%E6%8F%92%E4%BB%B6/" rel="tag">插件</a></li></ul> 
+
+        
+  <nav class="nav">
+    <a href="/Jason/2019/07/18/010Arduino/"><i class="iconfont iconleft"></i>Arduino也能在VScode里面耍</a>
+    <a href="/Jason/2019/06/11/008Rexsecret/">窥探大佬的博客<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+        <section class="comments">
+  
+    <div class="btn" id="comments-btn">查看评论</div>
+  
+  
+<div id="valine"></div>
+<script defer src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+  window.onload = function () {
+    var loadValine = function () {
+      new Valine({
+        el: '#valine',
+        app_id: "DVdC72eLHSbpU7IfHDuuN3YH-gzGzoHsz",
+        app_key: "KwWy7uHAQR849UjdpjqAL7Ae",
+        placeholder: "聊个5毛钱的呗",
+        avatar: "robohash",
+        pageSize: "10",
+        lang: "zh-CN",
+      });
+    }
+    if ( true ) {
+      $("#comments-btn").on("click", function () {
+        $(this).hide();
+        loadValine();
+      });
+    } else {
+      loadValine();
+    }
+  };
+</script>
+
+</section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4"><span class="toc-text">基本步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E4%BA%86%E5%BC%80%E5%A7%8B%E4%BA%86"><span class="toc-text">开始了开始了</span></a></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=2265059578 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="javascript:; "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://github.com/kang-git "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:kangnewer@163.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#FF3B00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail"></i>
+      </a><a 
+        href="https://space.bilibili.com/393538903 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#FF3B00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont "></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a>  | © 2019-2021 - <a href="/about/">Uhoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+    <div class="scrollbar j-scrollbar">
+  <div class="scrollbar-current j-scrollbar-current"></div>
+</div>
+  
+  
+    
+<script src="/Jason/js/color-mode.js"></script>
+
+  
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+  
+<script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+
+
+
+<script src="/Jason/js/utils.js"></script>
+<script src="/Jason/js/script.js"></script>
+
+
+
+  <script>
+  $.getScript("//cdn.jsdelivr.net/npm/leancloud-storage@4.1.0/dist/av-min.js", () => {
+
+    AV.init({
+      appId: 'YysLTSu7h9btNFHYJ5cWGfLo-gzGzoHsz',
+      appKey: 'Ejhw3FMfVaTMXqgzzc0YjrCr',
+      serverURLs: 'https://leancloud.cn/',
+    });
+
+    const showCount = (Counter) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud").each(async (e) => {
+        const url = $(".leancloud").eq(e).attr('id').trim();
+        const query = new AV.Query("Counter");
+        query.equalTo("words", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud").eq(e).text(count ? count : '--');
+      });
+    }
+
+    const addCount = (Counter) => {
+      const url = $(".leancloud").length === 1 ? $(".leancloud").attr('id').trim() : 'https://kangiter.gitee.io/Jason';
+      var query = new Counter;
+      query.save({
+        words: url
+      });
+    }
+
+    $(function () {
+      const Counter = AV.Object.extend("Counter");
+      addCount(Counter);
+      showCount(Counter);
+    });
+
+  });
+</script>
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

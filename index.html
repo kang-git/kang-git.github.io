@@ -1,0 +1,625 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jason&#39;s Blog</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="无聊小博客">
+  <meta name="author" content="kang">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/Jason/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1445822_s6x2xcokxrl.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: true,
+      fancybox: true,
+      pjax: true,
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: '/images/theme/loading.gif'
+      },
+      donate: {
+        enable: true,
+        alipay: '/images/zfb.jpg',
+        wechat: '/images/wc.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '',
+          api: 'https://source.unsplash.com/random/1920x1080'
+        },
+        motto: {
+          default: '',
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'simple'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="lock-screen">
+  <div class="loading"></div>
+  
+
+
+  
+
+<nav class="menu">
+  <div class="menu-wrap">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline active"> 首页</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 时间轴</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a>  | © 2019-2021 - <a href="/about/">Uhoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  
+    <div class="preview">
+  <nav class="navbar j-navbar-menu">
+    <i class="iconfont iconmenu"></i>
+  </nav>
+  <div class="preview-image">
+    <h2 class="preview-motto" id="motto"></h2>
+    
+      <div class="preview-overlay">
+        <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="preview-parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(var(--color-background-rgb),0.7"></use>
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(var(--color-background-rgb),0.5)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(var(--color-background-rgb),0.3)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="var(--color-background)"></use>
+          </g>
+        </svg>
+      </div>
+    
+  </div>
+  <div class="preview-scroll">
+    <a href="#container" class="smooth-scroll"><i class="iconfont iconMouse"></i></a>
+  </div>
+</div>
+  
+  <div class="container" id="container">
+    <section class="row post">
+  
+    
+
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
+    
+    <a href="/Jason/2021/03/10/014restart/" class="post-image">
+      <img   class="lazyload" data-original="/Jason/images/face13.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/Jason/2021/03/10/014restart/" title="重拾博客，Hexo更换主题" >重拾博客，Hexo更换主题</a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">度过持续熵增的2020年，重新拾起曾经费心搭建过的博客，此时的我已经经历了忙碌又傻眼的大三，考研，考研失败，签约工作，有忙碌，有失落，也有收获，比较好的一面是，现在的我能够用很平和的心态去面对各...</p>
+        </div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>三月 10, 2021</span>
+        
+          <span class="post-info-item">
+            <i class="iconfont iconeye"></i><span id="/Jason/2021/03/10/014restart/" class="leancloud" data-flag-title="重拾博客，Hexo更换主题"></span>
+          </span>
+        
+        <span class="post-info-item"><i class="iconfont iconfont-size"></i>416</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+    
+
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
+    
+    <a href="/Jason/2019/11/28/013newdomin/" class="post-image">
+      <img   class="lazyload" data-original="/Jason/images/face12.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/Jason/2019/11/28/013newdomin/" title="Archlinux installation guide" >Archlinux installation guide</a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">下载镜像文件（验证文件完整性，一般可省略）制作启动U盘选择键盘布局验证启动模式（UFFI+GPT &amp;amp; BIOS+MBR）联网更新系统时间分区格式化分区挂载分区更换镜像源安装基本的软件包生...</p>
+        </div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>十一月 28, 2019</span>
+        
+          <span class="post-info-item">
+            <i class="iconfont iconeye"></i><span id="/Jason/2019/11/28/013newdomin/" class="leancloud" data-flag-title="Archlinux installation guide"></span>
+          </span>
+        
+        <span class="post-info-item"><i class="iconfont iconfont-size"></i>177</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+    
+
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
+    
+    <a href="/Jason/2019/11/16/012auto-mount/" class="post-image">
+      <img   class="lazyload" data-original="/Jason/images/face11.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/Jason/2019/11/16/012auto-mount/" title="双系统环境下deepin中实现NTFS磁盘分区永久挂载(开机自动挂载)" >双系统环境下deepin中实现NTFS磁盘分区永久挂载(开机自动挂载)</a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">why you auto mount?deepin用了很久了，发现每次开机都是自动挂载，而且是/media/username/这种我个人觉得比较别扭的路径下面，看了下文件管理器的设置发现有操作空...</p>
+        </div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>十一月 16, 2019</span>
+        
+          <span class="post-info-item">
+            <i class="iconfont iconeye"></i><span id="/Jason/2019/11/16/012auto-mount/" class="leancloud" data-flag-title="双系统环境下deepin中实现NTFS磁盘分区永久挂载(开机自动挂载)"></span>
+          </span>
+        
+        <span class="post-info-item"><i class="iconfont iconfont-size"></i>6312</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+    
+
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
+    
+    <a href="/Jason/2019/08/03/011minqin/" class="post-image">
+      <img   class="lazyload" data-original="/Jason/images/face10.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/Jason/2019/08/03/011minqin/" title="绿勤行回忆录" >绿勤行回忆录</a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">出发之前进入大学之后，时间好像就从来没有等过我。或者说我在逐渐变懒！
+毫无防备，莫名就来到了大二的暑假。
+学院暑期科研实习生的安排出的太迟导致我又一次完美的错过了最为方便实惠的暑期社会实践项目，...</p>
+        </div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>八月 03, 2019</span>
+        
+          <span class="post-info-item">
+            <i class="iconfont iconeye"></i><span id="/Jason/2019/08/03/011minqin/" class="leancloud" data-flag-title="绿勤行回忆录"></span>
+          </span>
+        
+        <span class="post-info-item"><i class="iconfont iconfont-size"></i>1480</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+    
+
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
+    
+    <a href="/Jason/2019/07/18/010Arduino/" class="post-image">
+      <img   class="lazyload" data-original="/Jason/images/face9.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/Jason/2019/07/18/010Arduino/" title="Arduino也能在VScode里面耍" >Arduino也能在VScode里面耍</a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">那块uno放假呆在学校的几天没事干，下学期准备了一个比赛，很不情愿的又把尘封了一年的Arduino uno r3拿出来回顾了一遍。确认过板子，是那个没怎么被开发的。硬件de入门成本一直很高，而我...</p>
+        </div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>七月 18, 2019</span>
+        
+          <span class="post-info-item">
+            <i class="iconfont iconeye"></i><span id="/Jason/2019/07/18/010Arduino/" class="leancloud" data-flag-title="Arduino也能在VScode里面耍"></span>
+          </span>
+        
+        <span class="post-info-item"><i class="iconfont iconfont-size"></i>1648</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+    
+
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
+    
+    <a href="/Jason/2019/07/06/009matlab-extension/" class="post-image">
+      <img   class="lazyload" data-original="/Jason/images/face8.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/Jason/2019/07/06/009matlab-extension/" title="在VScode中使用matlab插件" >在VScode中使用matlab插件</a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">这篇文章应该是我第一次写有点实用性,有带指导作用的文章，或多或少会有点新手手生的特性，写出来估计会比较别扭
+大概是7月25号左右，整个专业都开始了机械原理课程设计，而且为了简化计算以及代码的复杂...</p>
+        </div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>七月 06, 2019</span>
+        
+          <span class="post-info-item">
+            <i class="iconfont iconeye"></i><span id="/Jason/2019/07/06/009matlab-extension/" class="leancloud" data-flag-title="在VScode中使用matlab插件"></span>
+          </span>
+        
+        <span class="post-info-item"><i class="iconfont iconfont-size"></i>1768</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+    
+
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
+    
+    <a href="/Jason/2019/06/11/008Rexsecret/" class="post-image">
+      <img   class="lazyload" data-original="/Jason/images/face7.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/Jason/2019/06/11/008Rexsecret/" title="窥探大佬的博客" >窥探大佬的博客</a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">写在前面六月凑一篇
+浑浑噩噩持续性上课上到了端午假前，本想着端午假好好休息一下，没想到半路杀出来个电工课设——做一个具有周，时，分，秒显示和整点报时功能的数字电子时钟，这这这，这玩意简直就是一个...</p>
+        </div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>六月 11, 2019</span>
+        
+          <span class="post-info-item">
+            <i class="iconfont iconeye"></i><span id="/Jason/2019/06/11/008Rexsecret/" class="leancloud" data-flag-title="窥探大佬的博客"></span>
+          </span>
+        
+        <span class="post-info-item"><i class="iconfont iconfont-size"></i>1185</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+    
+
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
+    
+    <a href="/Jason/2019/05/24/007Markdown3/" class="post-image">
+      <img   class="lazyload" data-original="/Jason/images/face6.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/Jason/2019/05/24/007Markdown3/" title="Markdown学习笔记(三)" >Markdown学习笔记(三)</a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">博客近况
+最近想着完善一下博客的功能，比如接入评论系统，但是突然发现主题作者推荐的,畅言评论系统注册后竟然必须要备案才能使用，阻断了我接入评论系统的进程，只能后面看一看来必力之类的评论系统了。
+...</p>
+        </div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>五月 24, 2019</span>
+        
+          <span class="post-info-item">
+            <i class="iconfont iconeye"></i><span id="/Jason/2019/05/24/007Markdown3/" class="leancloud" data-flag-title="Markdown学习笔记(三)"></span>
+          </span>
+        
+        <span class="post-info-item"><i class="iconfont iconfont-size"></i>3983</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+    
+
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
+    
+    <a href="/Jason/2019/05/19/006win10update/" class="post-image">
+      <img   class="lazyload" data-original="/Jason/images/face5.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/Jason/2019/05/19/006win10update/" title="将Win10系统更新为1903版本" >将Win10系统更新为1903版本</a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">最近看各路神仙自媒体疯狂写win10 1903版本的各种特性，按捺不住的我也手贱的操作了一番，没成想进行的还是相当顺利，说实话这不像微软的风格呀，以前都是坎坎坷坷凄凄惨惨戚戚-_-，装完了发现我...</p>
+        </div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>五月 19, 2019</span>
+        
+          <span class="post-info-item">
+            <i class="iconfont iconeye"></i><span id="/Jason/2019/05/19/006win10update/" class="leancloud" data-flag-title="将Win10系统更新为1903版本"></span>
+          </span>
+        
+        <span class="post-info-item"><i class="iconfont iconfont-size"></i>1241</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+</section>
+    <section class="paginator">
+  
+    <span class="page-number current">1</span><a class="page-number" href="/Jason/page/2/">2</a><a class="extend next" rel="next" href="/Jason/page/2/">&gt;</a>
+  
+</section>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=2265059578 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="javascript:; "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://github.com/kang-git "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:kangnewer@163.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#FF3B00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail"></i>
+      </a><a 
+        href="https://space.bilibili.com/393538903 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#FF3B00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont "></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a>  | © 2019-2021 - <a href="/about/">Uhoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+    <div class="scrollbar j-scrollbar">
+  <div class="scrollbar-current j-scrollbar-current"></div>
+</div>
+  
+  
+    
+<script src="/Jason/js/color-mode.js"></script>
+
+  
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+  
+<script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+
+
+
+<script src="/Jason/js/utils.js"></script>
+<script src="/Jason/js/script.js"></script>
+
+
+
+  <script>
+  $.getScript("//cdn.jsdelivr.net/npm/leancloud-storage@4.1.0/dist/av-min.js", () => {
+
+    AV.init({
+      appId: 'YysLTSu7h9btNFHYJ5cWGfLo-gzGzoHsz',
+      appKey: 'Ejhw3FMfVaTMXqgzzc0YjrCr',
+      serverURLs: 'https://leancloud.cn/',
+    });
+
+    const showCount = (Counter) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud").each(async (e) => {
+        const url = $(".leancloud").eq(e).attr('id').trim();
+        const query = new AV.Query("Counter");
+        query.equalTo("words", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud").eq(e).text(count ? count : '--');
+      });
+    }
+
+    const addCount = (Counter) => {
+      const url = $(".leancloud").length === 1 ? $(".leancloud").attr('id').trim() : 'https://kangiter.gitee.io/Jason';
+      var query = new Counter;
+      query.save({
+        words: url
+      });
+    }
+
+    $(function () {
+      const Counter = AV.Object.extend("Counter");
+      addCount(Counter);
+      showCount(Counter);
+    });
+
+  });
+</script>
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
